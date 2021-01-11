@@ -1,0 +1,25 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    new page
+{% endblock %}
+
+{% block body %}
+<form action="{% url 'newpage' %}" method="post">
+    {% csrf_token %}
+    <div class="form-group">
+    <label for="exampleFormControlInput1">title</label>
+    <input  class="form-control" id="exampleFormControlInput1" placeholder="title">
+    </div>
+
+
+    <div class="form-group">
+    <label for="exampleFormControlTextarea1">textarea</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">save</button>
+
+</form>
+{% endblock %}
+
+

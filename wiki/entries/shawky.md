@@ -1,0 +1,1 @@
+details of shawky's live
